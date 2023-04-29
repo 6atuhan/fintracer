@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face{
+    font-family:"Bank-miles";
+    src:url("/src/Fonts/Bank-miles.ttf")
+    }
+    @layer base {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+
+@layer components{
+    .neumorph{
+
+        background: linear-gradient(225deg, #c5d1d5, #a6b0b3);
+        box-shadow:  -17px 17px 34px #4a4e50,
+                     17px -17px 34px #ffffff;
+        }
+        .neumorph-btn-up{
+
+            background: #b8c3c7;
+            box-shadow:  -5px 5px 10px #4a4e50,
+                         5px -5px 10px #ffffff;
+            }
+            .neumorph-btn-down{
+            background: #b8c3c7;
+            box-shadow: inset -5px 5px 10px #4a4e50,
+                        inset 5px -5px 10px #ffffff;
+            }
+    .text-outline-thin{
+        text-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, 1px 1px 0px #000000;
+    }
+    .text-outline-bold{
+        text-shadow: rgb(1, 1, 1) 2px 0px 0px, rgb(1, 1, 1) 1.75517px 0.958851px 0px, rgb(1, 1, 1) 1.0806px 1.68294px 0px, rgb(1, 1, 1) 0.141474px 1.99499px 0px, rgb(1, 1, 1) -0.832294px 1.81859px 0px, rgb(1, 1, 1) -1.60229px 1.19694px 0px, rgb(1, 1, 1) -1.97998px 0.28224px 0px, rgb(1, 1, 1) -1.87291px -0.701566px 0px, rgb(1, 1, 1) -1.30729px -1.5136px 0px, rgb(1, 1, 1) -0.421592px -1.95506px 0px, rgb(1, 1, 1) 0.567324px -1.91785px 0px, rgb(1, 1, 1) 1.41734px -1.41108px 0px, rgb(1, 1, 1) 1.92034px -0.558831px 0px;
+    }
+
+    .center-flex{
+        @apply
+        flex items-center justify-center
+    }
+    .darkModeButton{
+
+        @apply
+        -m-4 hover:m-0 rounded-full w-16 h-16 transition-all 
+        hover:bg-zinc-900 hover:scale-150
+        dark:hover:bg-zinc-100
+        fixed top-0 right-0
+        dark:bg-amber-400
+        bg-zinc-600
+        shadow-lg dark:shadow-amber-400 shadow-zinc-900
+        rotate-45
+
+        /*
+         import { ref } from "@vue/reactivity"
+        const counter = ref(1)
+        const toggleDark=()=>{
+            counter.value++
+            if ( counter.value%2==0)
+            document.querySelector("html").setAttribute("class","dark")
+            else
+            document.querySelector("html").setAttribute("class","")
+        } 
+        */
+    }
+}
